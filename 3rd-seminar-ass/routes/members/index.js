@@ -56,7 +56,7 @@ router.get('/:idx', (req, res) => {
     return res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.MEMBER_READ_SUCCESS, member))
 })
 
-/* idx값으로 특정 멤버삭제 */
+// idx값으로 특정 멤버삭제 
 router.delete('/:idx', (req, res) => {
     const {
         idx
@@ -113,7 +113,7 @@ router.put('/:idx', (req, res) => {
         age,
     }
     //membersDB[memberIdx]인덱스에 접근해서 값 수정
-    
+
     return res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.MEMBER_UPDATE_SUCCESS, membersDB))
 })
 
